@@ -19,7 +19,7 @@ COPY . /app
 
 
 # Configure o ambiente virtual Python (venv)
-RUN python -m venv /venv
+RUN python -m venv /venv 
 
 
 # Crie a pasta env manualmente
@@ -34,3 +34,4 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Configure o supervisor para iniciar o nginx e o aplicativo Python
 CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+
